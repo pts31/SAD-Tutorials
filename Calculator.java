@@ -7,7 +7,7 @@ String stack[]=new String[50];
 int top=-1;
 
 
-static void expStack(String exp){
+void expStack(String exp){
     String s1="";
   top=-1;
 for(int i=0;i<exp.length();i++){
@@ -25,7 +25,7 @@ stack[++top]=s1;
 
 }
 
-static int calculate(String exp){
+int calculate(String exp){
     
     int a;
     expStack(exp);
@@ -83,9 +83,10 @@ static int calculate(String exp){
 public static void main(String args[]){
 
 Scanner sc=new Scanner(System.in);
+Calculator calc=new Calculator();
 System.out.println("Enter an expression:");
 String e=sc.nextLine();
-System.out.println(calculate(e));
+System.out.println(calc.calculate(e));
 
 }
 
